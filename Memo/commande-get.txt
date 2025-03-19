@@ -1,0 +1,27 @@
+Vous pouvez tester l'API en utilisant des outils comme Postman ou cURL. Voici comment effectuer les différentes requêtes avec curl :
+popur executer les cmds sous bash 
+curl http://localhost:3000/api/items
+
+GET un élément spécifique :
+
+bash
+afficher un element avec un id
+curl http://localhost:3000/api/items/1
+
+POST pour ajouter un élément :
+
+bash
+ajouter un element POST
+curl -X POST http://localhost:3000/api/items -H "Content-Type: application/json" -d '{"name": "Item 4"}'
+
+DELETE pour supprimer un élément :
+
+bash
+DELETE un element
+curl -X DELETE http://localhost:3000/api/items/1
+
+Améliorations possibles
+Validation des données : Vous pouvez ajouter une validation pour vérifier que les données envoyées dans une requête POST sont correctes.
+Stockage persistant : Actuellement, les données sont stockées dans un tableau en mémoire. Vous pourriez les enregistrer dans une base de données comme MongoDB ou SQLite pour rendre l'API persistante.
+Middleware : Implémenter des middlewares pour des actions comme l'authentification ou la gestion des erreurs.
+Voilà, vous avez créé une API REST basique en utilisant uniquement le module http de Node.js !
